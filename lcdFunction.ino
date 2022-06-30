@@ -1,0 +1,4 @@
+void displayLC(char text[])
+{
+    
+}
