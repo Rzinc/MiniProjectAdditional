@@ -12,11 +12,11 @@ void main()
 
     char input[] = "We're no strangers to love, you know the rules and so do I, A full commitments what I'm thinking of, I just wanna tell you how I'm feeling, Never gonna give uyou up, never gonna let you down, never gonna run aaround and Deseeert you";
     char i1[17];
-    printf("%ld", strlen(input));
-    for(int i = 0; i+16<strlen(input);i++)
+    // printf("%ld", strlen(input));
+    for(int i = 0; input[i+15] != '\0' ;++i)
         {
             memcpy(i1, input+i, 16);
-            i1[17] = '\0';
+            i1[16] = '\0';
             sendtoLCD(i1);
         }
 }
@@ -24,6 +24,6 @@ void main()
 
 void sendtoLCD(char x[])
 {
-    printf("%s\n", x);
+    printf("%s, %ld\n", x, strlen(x));
     // printf("%ld\n", strlen(x));
 }

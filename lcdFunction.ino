@@ -1,4 +1,0 @@
-void displayLC(char text[])
-{
-    
-}
